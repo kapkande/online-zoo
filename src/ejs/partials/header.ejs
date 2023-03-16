@@ -9,7 +9,7 @@
             <nav>
                 <ul class="header__nav__ul">
                     <li>
-                        <a style="color: orange;" class="header__nav__item link" href="">About</a>
+                        <a class="header__nav__item link <% if (title == 'about'){%>active<%}%>" href="/">About</a>
                     </li>
                     <li>
                         <a class="header__nav__item link" href="">Map</a>
@@ -18,7 +18,7 @@
                         <a class="header__nav__item link" href="">Zoos</a>
                     </li>
                     <li>
-                        <a class="header__nav__item link" href="../donate/index.html">Donate</a>
+                        <a class="header__nav__item link <% if (title == 'donate'){%>active<%}%>" href="/donate">Donate</a>
                     </li>
                     <li>
                         <a class="header__nav__item link" href="">Contact us</a>
@@ -28,8 +28,9 @@
         </div>
 
         <div class="header__designed">
-            <a class="link" href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks?node-id=126%3A0">Designed
-                    by ©</a>
+            <a class="link"
+                href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks?node-id=126%3A0">Designed
+                by ©</a>
         </div>
         <div class="header__burger">
             <div class="header__burger__line"></div>

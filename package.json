@@ -4,7 +4,7 @@
         "build": "webpack",
         "dev": "webpack serve",
         "lint": "eslint . --ext .ts",
-        "serve": "nodemon ./src/index.js"
+        "server": "nodemon ./src/index.js"
     },
     "keywords": [],
     "author": "kapkande",

@@ -2,13 +2,13 @@
     <div class="footer__content">
         <div class="footer__section-logo">
             <div class="logo">
-                <a class="logo__text" href="../main/index.html">
+                <a class="logo__text" href="/">
                     <h1>PetStory online</h1>
                 </a>
             </div>
             <div class="footer__btm">
 
-                <a class="button" href="../donate/index.html">donate for volunteers</a>
+                <a class="button" href="/donate">donate for volunteers</a>
             </div>
         </div>
         <div class="footer__section-submit">
@@ -52,8 +52,7 @@
             <nav>
                 <ul class="footer__nav__ul">
                     <li>
-                        <a style="
-                        color: orange;" class="footer__nav__item link" href="#nav">About</a>
+                        <a class="footer__nav__item link <% if (title == 'about'){%>active<%}%>" href="/">About</a>
                     </li>
                     <li>
                         <a class="footer__nav__item link" href="">Map</a>
