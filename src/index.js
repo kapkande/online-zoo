@@ -26,6 +26,9 @@ app.get('/', (req, res) => {
 app.get('/donate', (req, res) => {
     res.render('donate', { title: 'donate' });
 })
+app.get('/map', (req, res) => {
+    res.render('mapPage', { title: 'map' });
+})
 app.listen(PORT, () => {
     console.log('server has been started ' + PORT);
 })
