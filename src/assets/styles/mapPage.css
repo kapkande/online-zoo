@@ -1,5 +1,76 @@
-.map .wrap{
-    width: 800px;
+.map .wrap {
+    /* width: 800px; */
     margin: 0 auto;
-    background-color: #EAF7FE; 
+    background-color: #EAF7FE;
+    max-width: 100%;
+}
+ .body {
+    margin: 0;
+ }
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.hidden {
+    overflow: hidden;
+}
+.wrap {
+    margin: 0 auto;
+    max-width: 1160px;
+}
+a {
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: center;
+    gap: 5px;
+    right: 2%;
+    margin-top: -145px;
+    width: 99%;
+    padding-bottom: 1%;
+}
+button{
+    /* transition: all 0.5s; */
+    transition: border 0s;
+}
+.plus,
+.minus {
+    width: 54px;
+    height: 54px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+.plus:hover,
+.minus:hover{
+    border: 2px solid #4B9200;
+    border-radius: 5px;
+}
+.plus {
+    background-image: url(../icons/mapPage/plus.svg);
+}
+
+.minus {
+    background-image: url(../icons/mapPage/minus.svg);
+}
+
+.footer {
+    z-index: 1;
+    position: relative;
+}
+#cg{
+    background: url(../icons/mapPage/Vector.svg) no-repeat center;
+    background-size: 100%;
 }

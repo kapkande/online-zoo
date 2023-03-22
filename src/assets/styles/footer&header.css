@@ -253,6 +253,12 @@
     justify-content: flex-end;
     gap: 10px;
     padding: 0 8px 18px 0px;
+    opacity: 0.4;
+    transition: all 0.5s;
+}
+
+.footer__contacts-designed:hover {
+    opacity: 1;
 }
 
 .footer__nav__ul {
@@ -725,6 +731,6 @@ input[type="number"]:focus:valid+label {
     }
 }
 
-.active{
+.active {
     color: orange;
 }
