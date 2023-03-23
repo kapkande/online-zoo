@@ -1,3 +1,6 @@
+p{
+    margin: 0;
+}
 .map .wrap {
     /* width: 800px; */
     margin: 0 auto;
@@ -58,13 +61,6 @@ button{
     border: 2px solid #4B9200;
     border-radius: 5px;
 }
-.plus {
-    background-image: url(../icons/mapPage/plus.svg);
-}
-
-.minus {
-    background-image: url(../icons/mapPage/minus.svg);
-}
 
 .footer {
     z-index: 1;
@@ -73,4 +69,81 @@ button{
 #cg{
     background: url(../icons/mapPage/Vector.svg) no-repeat center;
     background-size: 100%;
+}
+/*  */
+path:hover {
+    fill: #FFEE2E;
+    stroke: #FFEE2E;
+    stroke-width: 4.5px;
+}
+
+.oceanxx:hover {
+    opacity: 1;
+    fill: #EAF7FE;
+    stroke-width: 0;
+}
+
+.circlexx {
+    opacity: 1;
+    fill: #c0c0c0;
+    stroke: #000000;
+    stroke-width: 0.5;
+}
+
+.subxx {
+    opacity: 1;
+    fill: #c0c0c0;
+    stroke: #000000;
+    stroke-width: 0.3;
+}
+
+.landxx {
+    fill: #C3B89E;
+    stroke: #EAF7FE;
+    stroke-width: 0.5;
+    fill-rule: evenodd;
+}
+.coastxx {
+    stroke-width: 0.2;
+}
+
+.noxx {
+    opacity: 1;
+    fill: #c0c0c0;
+    stroke: #000000;
+    stroke-width: 0.5;
+}
+
+.limitxx {
+    opacity: 1;
+    fill: #c0c0c0;
+    stroke: #ffffff;
+    stroke-width: 0.2;
+    fill-rule: evenodd;
+}
+
+.unxx {
+    opacity: 1;
+    fill: #c0c0c0;
+    stroke: #000000;
+    stroke-width: 0.3;
+}
+
+.oceanxx {
+    opacity: 1;
+    fill: #EAF7FE;
+    stroke-width: 0;
+}
+#cg{
+    position: relative;
+    }
+/*  */
+.plusMap:hover, .minusMap:hover{
+    fill: #333B41;
+    stroke: none;
+}
+
+.plus:hover .plusMap,
+.minus:hover .minusMap{
+    fill: #4B9200;
 }
