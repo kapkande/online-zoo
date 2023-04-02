@@ -1,26 +1,36 @@
-p{
+p {
     margin: 0;
 }
+
 .map .wrap {
     /* width: 800px; */
     margin: 0 auto;
     background-color: #EAF7FE;
     max-width: 100%;
 }
- .body {
+
+.body {
     margin: 0;
- }
+}
+
 .wrapper {
     max-width: 1600px;
     margin: 0 auto;
 }
+
 .hidden {
     overflow: hidden;
 }
+
 .wrap {
     margin: 0 auto;
     max-width: 1160px;
 }
+
+.map .wrap {
+    overflow: hidden;
+}
+
 a {
     text-decoration: none;
     font-family: 'Roboto';
@@ -42,10 +52,12 @@ a {
     width: 99%;
     padding-bottom: 1%;
 }
-button{
+
+button {
     /* transition: all 0.5s; */
     transition: border 0s;
 }
+
 .plus,
 .minus {
     width: 54px;
@@ -56,8 +68,9 @@ button{
     background-color: #FFFFFF;
     cursor: pointer;
 }
+
 .plus:hover,
-.minus:hover{
+.minus:hover {
     border: 2px solid #4B9200;
     border-radius: 5px;
 }
@@ -66,11 +79,15 @@ button{
     z-index: 1;
     position: relative;
 }
-#cg{
+
+#cg {
     background: url(../icons/mapPage/Vector.svg) no-repeat center;
     background-size: 100%;
 }
+
+
 /*  */
+
 path:hover {
     fill: #FFEE2E;
     stroke: #FFEE2E;
@@ -103,6 +120,7 @@ path:hover {
     stroke-width: 0.5;
     fill-rule: evenodd;
 }
+
 .coastxx {
     stroke-width: 0.2;
 }
@@ -134,16 +152,21 @@ path:hover {
     fill: #EAF7FE;
     stroke-width: 0;
 }
-#cg{
+
+#cg {
     position: relative;
-    }
+}
+
+
 /*  */
-.plusMap:hover, .minusMap:hover{
+
+.plusMap:hover,
+.minusMap:hover {
     fill: #333B41;
     stroke: none;
 }
 
 .plus:hover .plusMap,
-.minus:hover .minusMap{
+.minus:hover .minusMap {
     fill: #4B9200;
 }
