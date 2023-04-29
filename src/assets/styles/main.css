@@ -115,12 +115,12 @@ button {
 
 .favoriteAnimal {
     height: 700px;
-    background: url(../imeges/giantPanda.png) no-repeat;
+    background: url(./src/assets/imeges/giantPanda.png) no-repeat;
     background-position: 0px -79px;
 }
 
 .backstage {
-    background: url(../imeges/flower_foto1.png) no-repeat;
+    background: url(./src/assets/imeges/flower_foto1.png) no-repeat;
     padding: 9% 0;
     background-position: right 14px;
 }
@@ -169,7 +169,7 @@ button {
 
 .pets {
     padding-top: 2%;
-    background: url('../imeges/palm_foto.png') bottom left no-repeat, url('../imeges/strelitzia.png') right bottom no-repeat;
+    background: url('./src/assets/imeges/palm_foto.png') bottom left no-repeat, url('./src/assets/imeges/strelitzia.png') right bottom no-repeat;
 }
 
 
@@ -323,7 +323,7 @@ button {
 }
 
 .pick {
-    background: url(../imeges/panda_bg.png) no-repeat;
+    background: url(./src/assets/imeges/panda_bg.png) no-repeat;
     padding-top: 24%;
 }
 
@@ -565,7 +565,7 @@ button {
 }
 
 .testimonials {
-    background: url(../imeges/testimonials_leav_foto.png) no-repeat right 126%;
+    background: url(./src/assets/imeges/testimonials_leav_foto.png) no-repeat right 126%;
 }
 
 .wrap {}
@@ -798,7 +798,7 @@ input[type=range]::-webkit-slider-runnable-track {
     }
     .favoriteAnimal {
         height: 506px;
-        background: url(../imeges/GiantPanda_small.png) no-repeat;
+        background: url(../src/assets/imeges/GiantPanda_small.png) no-repeat;
         background-position: 0px 101%;
         background-size: 100%;
     }
@@ -822,7 +822,7 @@ input[type=range]::-webkit-slider-runnable-track {
     }
     /*<--  pets block -->*/
     .pets {
-        background: url(../imeges/palm_foto_small.png) bottom left no-repeat, url(../imeges/strelitzia_small.png) right bottom no-repeat;
+        background: url(./src/assets/imeges/palm_foto_small.png) bottom left no-repeat, url(./src/assets/imeges/strelitzia_small.png) right bottom no-repeat;
     }
     .arrBig {
         display: none;
@@ -912,7 +912,7 @@ input[type=range]::-webkit-slider-runnable-track {
     }
     /*<--  testimonials block -->*/
     .testimonials {
-        background: url(../imeges/testimonials_leav_foto_small.png) no-repeat right 117%;
+        background: url(./src/assets/imeges/testimonials_leav_foto_small.png) no-repeat right 117%;
         padding: 102px 0 140px 0;
     }
     .testimonials__slider {
@@ -983,7 +983,7 @@ input[type=range]::-webkit-slider-runnable-track {
     }
     .favoriteAnimal {
         height: 340px;
-        background: url(../imeges/GiantPanda_tablet.png) no-repeat;
+        background: url(./src/assets/imeges/GiantPanda_tablet.png) no-repeat;
         background-position: 0px 0px;
         background-size: 100%;
         padding-top: 30px;
@@ -994,7 +994,7 @@ input[type=range]::-webkit-slider-runnable-track {
     /*   backstage    */
     .backstage {
         padding: 9.2% 0;
-        background: url(../imeges/flower_foto_tablet.png) no-repeat;
+        background: url(./src/assets/imeges/flower_foto_tablet.png) no-repeat;
         background-position: right -6px;
     }
     .backstage__imge img:nth-child(2) {
@@ -1051,7 +1051,7 @@ input[type=range]::-webkit-slider-runnable-track {
         padding-bottom: 16%;
     }
     .pets {
-        background: url(../imeges/palm_foto_tablet.png) bottom left no-repeat, url(../imeges/strelitzia_tablet.png) right bottom no-repeat;
+        background: url(./src/assets/imeges/palm_foto_tablet.png) bottom left no-repeat, url(./src/assets/imeges/strelitzia_tablet.png) right bottom no-repeat;
     }
     /*  pickFeed     */
     .pickFeed {
@@ -1148,7 +1148,7 @@ input[type=range]::-webkit-slider-runnable-track {
     }
     .testimonials__btm {}
     .testimonials {
-        background: url(../imeges/testimonials_leav_foto_tablet.png) no-repeat right 115%;
+        background: url(./src/assets/imeges/testimonials_leav_foto_tablet.png) no-repeat right 115%;
         padding: 63px 0 78px 0;
     }
     .pickFeed__roundArrows {
@@ -1245,7 +1245,7 @@ input[type=range]::-webkit-slider-runnable-track {
     /*   favoriteAnimal  */
     .favoriteAnimal {
         height: 262px;
-        background: url(../imeges/GiantPanda_mobile.png) no-repeat;
+        background: url(./src/assets/imeges/GiantPanda_mobile.png) no-repeat;
         background-size: 100%;
         background-position: 0px 34px;
     }
@@ -1272,7 +1272,7 @@ input[type=range]::-webkit-slider-runnable-track {
         font-size: 24px;
     }
     .backstage {
-        background: url(../imeges/flower_foto_mobile.png) no-repeat;
+        background: url(./src/assets/imeges/flower_foto_mobile.png) no-repeat;
         background-position: right 30px;
     }
     .backstage {
@@ -1305,7 +1305,7 @@ input[type=range]::-webkit-slider-runnable-track {
     }
     /*  pets  */
     .pets {
-        background: url(../imeges/palm_foto_mobile.png) bottom left no-repeat, url(../imeges/strelitzia_mobile.png) right bottom no-repeat;
+        background: url(./src/assets/imeges/palm_foto_mobile.png) bottom left no-repeat, url(./src/assets/imeges/strelitzia_mobile.png) right bottom no-repeat;
     }
     .arrLitle {
         display: none;
@@ -1446,7 +1446,7 @@ input[type=range]::-webkit-slider-runnable-track {
     }
     .testimonials {
         padding: 33px 0 62px 0;
-        background: url(../imeges/testimonials_leav_foto_mobile.png) no-repeat right 106%;
+        background: url(./src/assets/imeges/testimonials_leav_foto_mobile.png) no-repeat right 106%;
     }
     .testimonials__btm {
         width: 240px;

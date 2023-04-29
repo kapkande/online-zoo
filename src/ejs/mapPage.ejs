@@ -2,29 +2,29 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="styles/mapPage.css">
-    <link rel="stylesheet" href="styles/footer&header.css">
+    <link rel="stylesheet" href="src/assets/styles/mapPage.css">
+    <link rel="stylesheet" href="src/assets/styles/footer&header.css">
     <%-include('./partials/head')%>
 </head>
 
 <body class="body">
     <div class="wrapper">
         <header class="header">
-            <%-include('./partials/header')%>
+            <%-include('partials/header')%>
         </header>
         <section class="map">
-            <%-include('./partials/svgMap')%>
+            <%-include('partials/svgMap')%>
         </section>
         <footer class="footer">
-            <%-include('./partials/footer')%>
+            <%-include('partials/footer')%>
         </footer>
         <div class="popup">
-            <%-include('./partials/popup')%>
+            <%-include('partials/popup')%>
         </div>
     </div>
 
 
-    <script src="../mapPage.js"></script>
+    <script src="dist/assets/components/mapPage/index.js"></script>
 </body>
 
 </html>

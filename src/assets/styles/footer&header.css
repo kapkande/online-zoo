@@ -42,7 +42,7 @@
     line-height: 120%;
     text-align: center;
     color: #FFFFFF;
-    background: url(../icons/logo_bamboo.svg) no-repeat;
+    background: url(./src/assets/icons/logo_bamboo.svg) no-repeat;
     background-position: 12px 21px;
 }
 
@@ -138,19 +138,19 @@
 }
 
 .footer__icon-Facebook {
-    background-image: url(../icons/footer/Facebook.svg);
+    background-image: url("src/assets/icons/footer/facebook.svg");
 }
 
 .footer__icon-Twitter {
-    background-image: url(../icons/footer/Twitter.svg );
+    background-image: url("./src/assets/icons/footer/twitter.svg" );
 }
 
 .footer__icon-Instagram {
-    background-image: url(../icons/footer/Instagram.svg);
+    background-image: url("./src/assets/icons/footer/instagram.svg");
 }
 
 .footer__icon-YouTube {
-    background-image: url(../icons/footer/YouTube.svg);
+    background-image: url("./src/assets/icons/footer/youtube.svg");
 }
 
 .footer__btm a {
@@ -477,7 +477,7 @@ input[type="number"]:focus:valid+label {
 
     .header__nav__blox .logo .logo__text h1 {
         font-size: 12.2899px;
-        background: url(../icons/bamboo_tablet.svg) no-repeat;
+        background: url(./src/assets/icons/bamboo_tablet.svg) no-repeat;
         background-position: 4px 15px;
     }
 
@@ -565,7 +565,7 @@ input[type="number"]:focus:valid+label {
     }
 
     .popup__wrap .logo .logo__text h1 {
-        background: url(../icons/logo_bamboo_orang.svg) no-repeat;
+        background: url(./src/assets/icons/logo_bamboo_orang.svg) no-repeat;
         background-position: 10px 17px;
     }
 
