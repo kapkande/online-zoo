@@ -88,76 +88,107 @@
 // }
 
 
-
+const key = '47c6f5ec-fc30-40a6-b27c-55b158578b77'
 
 
 
 ymaps.ready(init)
 function init() {
     var map = new ymaps.Map("map", {
-        center: [6, 20],
+        center: [25, 10],
         zoom: 3
     });
-    // const myPlacemark = new ymaps.Placemark([0.76, 0.64], {
-    //     hintContent: 'РњРѕСЃРєРІР°',
-    //     balloonContent: 'РЎС‚РѕР»РёС†Р° Р РѕСЃСЃРёРё'
-    // });
-    // map.geoObjects.add(myPlacemark);
     document.querySelector('.ymaps-2-1-79-gototech')?.remove();
     document.querySelector('.ymaps-2-1-79-controls__control')?.remove();
 
-    // const img = new ymaps.Placemark(map.getCenter(), {
-    //     hintContent: 'РЎРѕР±СЃС‚РІРµРЅРЅС‹Р№ Р·РЅР°С‡РѕРє РјРµС‚РєРё',
-    //     balloonContent: 'Р­С‚Рѕ РєСЂР°СЃРёРІР°СЏ РјРµС‚РєР°'
+
+    ymaps.borders.load('001', { lang: 'en', quality: 1 }).then(function (geojson) {
+        ymaps.geoQuery(geojson).setOptions({ fillColor: '#C3B89E', strokeColor: '#EAF7FE' }).addToMap(map);
+    });
+
+    ymaps.borders.load('001', { lang: 'en', quality: 1 }).then(function (geojson) {
+        var regions = ymaps.geoQuery(geojson);
+        regions.search('properties.iso3166 = "US"').setOptions('fillColor', '#FFEE2E').addToMap(map);
+    });
+    ymaps.borders.load('001', { lang: 'en', quality: 1 }).then(function (geojson) {
+        var regions = ymaps.geoQuery(geojson);
+        regions.search('properties.iso3166 = "CN"').setOptions('fillColor', '#FFEE2E').addToMap(map);
+    });
+
+    // var polygon = new ymaps.Polygon([
+    //     [[-180, 90], [180, 90],
+    //      [90, -180], [9,180]],
+
+    // ], {
+    //     hintContent: "Многоугольник"
     // }, {
-    //     // РћРїС†РёРё.
-    //     // РќРµРѕР±С…РѕРґРёРјРѕ СѓРєР°Р·Р°С‚СЊ РґР°РЅРЅС‹Р№ С‚РёРї РјР°РєРµС‚Р°.
-    //     iconLayout: 'default#image',
-    //     // РЎРІРѕС‘ РёР·РѕР±СЂР°Р¶РµРЅРёРµ РёРєРѕРЅРєРё РјРµС‚РєРё.
-    //     iconImageHref: '../../assets/icons/dolar.svg',
-    //     // Р Р°Р·РјРµСЂС‹ РјРµС‚РєРё.
-    //     iconImageSize: [30, 42],
-    //     // РЎРјРµС‰РµРЅРёРµ Р»РµРІРѕРіРѕ РІРµСЂС…РЅРµРіРѕ СѓРіР»Р° РёРєРѕРЅРєРё РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ
-    //     // РµС‘ "РЅРѕР¶РєРё" (С‚РѕС‡РєРё РїСЂРёРІСЏР·РєРё).
-    //     iconImageOffset: [-5, -38],
-
-
-    // })
-    // map.geoObjects.add(img);
-
-
-    //выделение 
-    // ymaps.borders.load('RU', {
-    //     lang: "en",
-    //     quality: 2
-    // }).then(function (geojson) {
-    //     console.log(map);
-    //     for (var i = 0; i < geojson.features.length; i++) {
-    //     var objectManager = new ymaps.ObjectManager();
-    //     objectManager.add(geojson.features[i]);
-    //     map.geoObjects.add(objectManager)
-    //     }
-    //     console.log(geojson.features[1]);
+    //     fillColor: '#6699ff',
+    //     // Делаем полигон прозрачным для событий карты.
+    //     interactivityModel: 'default#transparent',
+    //     strokeWidth: 8,
+    //     opacity: 1
     // });
-
-
-
-    ymaps.borders.load('RU', {
-        lang: 'en'
-    }).then(function (geojson) {
-        var features = geojson.features.map(function (feature) {
-            feature.id = feature.properties.iso3166;
-            return feature;
-        });
-        var objectManager = new ymaps.ObjectManager();
-        objectManager.add(features);
-        map.geoObjects.add(objectManager);
-    })
-
-    
-    // ymaps.borders.load('USA', {
-    //     lang: 'en'
-    // }).then(function (geojson) {
-    //     console.log(geojson);
-    // })
+    // map.geoObjects.add(polygon);
+  
 }
+
+// ymaps.ready(function () {
+//     var myMap = new ymaps.Map('map', {
+//         center: [55.76, 37.64],
+//         zoom: 3
+//     })
+
+//     // var earthPolygon = new ymaps.Polygon([
+//     //     [
+//     //         { latitude: 80, longitude: -170 }, // северный запад
+//     //         { latitude: 80, longitude: 170 }, // северный восток
+//     //         { latitude: -80, longitude: 170 }, // южный восток
+//     //         { latitude: -80, longitude: -170 } // южный запад
+//     //     ]
+//     // ], { hintContent: 'Москва',  balloonContent: 'Столица России'}, {
+//     //     fillColor: '#000000', // голубой цвет
+//     //     strokeColor: '#000000',
+//     //     iconColor: '#FF0000'
+//     // })
+//     // myMap.geoObjects.add(earthPolygon);
+
+//     //
+
+//     var polygon = new ymaps.Polygon([
+//         [[-180, 90], [180, -180], [10, -90], [-0, 0]],
+
+//     ], {
+//         hintContent: "Многоугольник"
+//     }, {
+//         fillColor: '#6699ff',
+//         // Делаем полигон прозрачным для событий карты.
+//         interactivityModel: 'default#transparent',
+//         strokeWidth: 8,
+//         opacity: 1
+//     });
+//     myMap.geoObjects.add(polygon);
+//     // myMap.setBounds(polygon.geometry.getBounds());
+
+
+
+//     //
+
+
+//     var myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+//         hintContent: 'Москва',
+//         balloonContent: 'Столица России'
+//     }, {
+//         iconColor: '#FF0000' // красный цвет метки
+//     });
+
+//     myMap.geoObjects.add(myPlacemark);
+
+//     ymaps.borders.load('001', { lang: 'en', quality: 1 }).then(function (geojson) {
+//         var regions = ymaps.geoQuery(geojson);
+//         regions.search('properties.iso3166 = "US"').setOptions('fillColor', '#FFEE2E').addToMap(map);
+//     });
+//     ymaps.borders.load('001', { lang: 'en', quality: 1 }).then(function (geojson) {
+//         var regions = ymaps.geoQuery(geojson);
+//         regions.search('properties.iso3166 = "CN"').setOptions('fillColor', '#FFEE2E').addToMap(map);
+//     });
+// })

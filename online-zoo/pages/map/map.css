@@ -8,3 +8,11 @@ section {
     height: 100vh; 
 
 }
+
+
+
+    .ymaps-layers-pane {
+
+        filter: hue-rotate(45deg);
+        
+        }
