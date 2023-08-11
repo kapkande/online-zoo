@@ -94,51 +94,187 @@ const key = '47c6f5ec-fc30-40a6-b27c-55b158578b77'
 
 ymaps.ready(init)
 function init() {
-    var map = new ymaps.Map("map", {
+    const map = new ymaps.Map("map", {
         center: [25, 10],
         zoom: 3
+    }, {
+        // suppressMapOpenBlock: true,
+        // restrictMapArea: [[55.45, 37.20], [56.00, 38.00]]
+        backgroundColor: '#f5f5f5'
     });
     document.querySelector('.ymaps-2-1-79-gototech')?.remove();
     document.querySelector('.ymaps-2-1-79-controls__control')?.remove();
 
-
-    ymaps.borders.load('001', { lang: 'en', quality: 1 }).then(function (geojson) {
-        ymaps.geoQuery(geojson).setOptions({ fillColor: '#C3B89E', strokeColor: '#EAF7FE' }).addToMap(map);
-    });
-
-    ymaps.borders.load('001', { lang: 'en', quality: 1 }).then(function (geojson) {
-        var regions = ymaps.geoQuery(geojson);
-        regions.search('properties.iso3166 = "US"').setOptions('fillColor', '#FFEE2E').addToMap(map);
-    });
-    ymaps.borders.load('001', { lang: 'en', quality: 1 }).then(function (geojson) {
-        var regions = ymaps.geoQuery(geojson);
-        regions.search('properties.iso3166 = "CN"').setOptions('fillColor', '#FFEE2E').addToMap(map);
-    });
-
-    // var polygon = new ymaps.Polygon([
-    //     [[-180, 90], [180, 90],
-    //      [90, -180], [9,180]],
-
-    // ], {
-    //     hintContent: "Многоугольник"
-    // }, {
-    //     fillColor: '#6699ff',
-    //     // Делаем полигон прозрачным для событий карты.
-    //     interactivityModel: 'default#transparent',
-    //     strokeWidth: 8,
-    //     opacity: 1
+    // ymaps.borders.load("001", {
+    //     lang: "en",
+    //     quality: 2
+    // }).then(function (geojson) {
+    //     for (const i = 0; i < geojson.features.length; i++) {
+    //         const geoObject = new ymaps.GeoObject(geojson.features[i]);
+    //         map.geoObjects.add(geoObject);
+    //     }
     // });
-    // map.geoObjects.add(polygon);
-  
+
+
+    // ymaps.borders.load('001', { lang: 'en', quality: 1 }).then(function (geojson) {
+    //     ymaps.geoQuery(geojson).setOptions({ fillColor: '#C3B89E', strokeColor: '#EAF7FE' }).addToMap(map);
+    // });
+
+    ymaps.borders.load('001', { lang: 'en', quality: 1 }).then(function (geojson) {
+        const regions = ymaps.geoQuery(geojson);
+        regions.search('properties.iso3166 = "US"').setOptions({ 'strokeColor': '#000000', 'fillColor': 'rgba(250,250,250,0)' }).addToMap(map);
+    });
+    ymaps.borders.load('001', { lang: 'en', quality: 3 }).then(function (geojson) {
+        const regions = ymaps.geoQuery(geojson);
+        regions.search('properties.iso3166 = "CN"').setOptions({ 'strokeColor': '#000000', 'fillColor': 'rgba(250,250,250,0)' }).addToMap(map);
+    });
+    ymaps.borders.load('001', { lang: 'en', quality: 3 }).then(function (geojson) {
+        const regions = ymaps.geoQuery(geojson);
+        regions.search('properties.iso3166 = "CG"').setOptions({ 'strokeColor': '#000000', 'fillColor': 'rgba(250,250,250,0)' }).addToMap(map);
+    });
+
+
+    // const myPlacemark = new ymaps.Placemark([55.76, 37.56], {}, {
+    //     iconLayout: 'default#image',
+    //     iconImageHref: 'https://i.pinimg.com/originals/8a/a7/83/8aa7831e22f8d5c74aecfe0c0e6953e3.jpg',
+    //     icon_imagesize: [30, 42],
+    //     // iconImageOffset: [-3, -42]
+    // });
+
+
+    // map.geoObjects.add(myPlacemark);
+
+
+
+    // // console.log(map.geoObjects.options);
+    // const myCollection = new ymaps.GeoObjectCollection();
+    // // Добавляем метки в коллекцию.
+    // myCollection.add(new ymaps.Placemark([37.61, 55.75]));
+    // // При наведении на одну из меток подсвечиваем коллекцию целиком.
+    // myCollection.events
+    //     .add("mouseenter", function () {
+    //         myCollection.options.set("preset", "twirl#redIcon");
+    //         console.log(1);
+    //     })
+    //     .add("mouseleave", function () {
+    //         myCollection.options.unset("preset");
+    //     });
+
+    // // Добавляем коллекцию на карту.
+    // map.geoObjects.add(myCollection);
+
+    // map.geoObjects.events.add("click", function (e) {
+    //     const coords = e.get('coords');
+    //     document.querySelector('.ymapsPopup')?.remove()
+    //     const myLayout = ymaps.templateLayoutFactory.createClass(
+    //         `<div class="ymapsPopup">
+    //             <div class="ymapsPopup__wrapper">
+    //                 <div class="ymapsPopup__text"></div>
+    //                 <a class="ymapsPopup__button" href="">Whatch Online</a>
+    //             </div>
+    //         </div>`
+    //     );
+
+
+    // })
+
+
+
+
+
+
+    // const popup = new ymaps.Popup(['8.81009232756765', '-93.095703125'], {
+    //     contentBody: '<div class="popup">HTML-код элемента</div>'
+    // });
+    // 
+    // const parent = popup.getMap();
+    // map.geoObjects.add(parent);
+    // // Устанавливаем карте центр и масштаб так, чтобы охватить коллекцию целиком.
+    // map.setBounds(myCollection.getBounds());
+    createPlacemarks(map)
+}
+function createPlacemarks(map) {
+    const Element = ymaps.templateLayoutFactory.createClass(
+        `<div class="ymapsPopup">
+                <div class="ymapsPopup__wrapper">
+                <div class="ymapsPopup__text">
+                    <div class="ymapsPopup__name">{{ properties.name }}</div>
+                    <div class="ymapsPopup__cantry">{{ properties.cantry }}</div>
+                </div>
+                    <a class="ymapsPopup__button" href="{{ properties.link }}">Whatch Online</a>
+                </div>
+            </div>`
+    );
+    const congo = new ymaps.Placemark(
+        [-4.16, 15.17],
+        {
+            name: '',
+            cantry: 'Congo',
+            link: '',
+
+        },
+        {
+            iconLayout: 'default#image',
+            iconImageHref: '../../assets/icons/map/greenVector.svg',
+            balloonContentLayout: Element,
+        }
+    );
+    map.geoObjects.add(congo);
+
+    const alligator = new ymaps.Placemark(
+        [27.30, -81.48],
+        {
+            name: 'Alligator',
+            cantry: "Florida, USA",
+            link: '',
+        },
+        {
+            iconLayout: 'default#image',
+            iconImageHref: '../../assets/icons/map/greenVector.svg',
+            // iconImageHref: '../../assets/icons/map/alligator.svg',
+            balloonContentLayout: Element,
+        },
+    );
+    map.geoObjects.add(alligator);
+
+    const eagle = new ymaps.Placemark(
+        [35, -115.48],
+        {
+            name: 'Eagle',
+            cantry: "Eldorado National Forest, USA",
+            link: '',
+        },
+        {
+            iconLayout: 'default#image',
+            iconImageHref: '../../assets/icons/map/greenVector.svg',
+            balloonContentLayout: Element,
+        }
+    );
+    map.geoObjects.add(eagle);
+
+    const panda = new ymaps.Placemark(
+        [30, 110],
+        {
+            name: 'Panda',
+            cantry: "China",
+            link: '',
+        },
+        {
+            iconLayout: 'default#image',
+            iconImageHref: '../../assets/icons/map/greenVector.svg',
+            balloonContentLayout: Element,
+        }
+    );
+    map.geoObjects.add(panda);
 }
 
 // ymaps.ready(function () {
-//     var myMap = new ymaps.Map('map', {
+//     const myMap = new ymaps.Map('map', {
 //         center: [55.76, 37.64],
 //         zoom: 3
 //     })
 
-//     // var earthPolygon = new ymaps.Polygon([
+//     // const earthPolygon = new ymaps.Polygon([
 //     //     [
 //     //         { latitude: 80, longitude: -170 }, // северный запад
 //     //         { latitude: 80, longitude: 170 }, // северный восток
@@ -154,7 +290,7 @@ function init() {
 
 //     //
 
-//     var polygon = new ymaps.Polygon([
+//     const polygon = new ymaps.Polygon([
 //         [[-180, 90], [180, -180], [10, -90], [-0, 0]],
 
 //     ], {
@@ -174,7 +310,7 @@ function init() {
 //     //
 
 
-//     var myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+//     const myPlacemark = new ymaps.Placemark([55.76, 37.64], {
 //         hintContent: 'Москва',
 //         balloonContent: 'Столица России'
 //     }, {
@@ -184,11 +320,11 @@ function init() {
 //     myMap.geoObjects.add(myPlacemark);
 
 //     ymaps.borders.load('001', { lang: 'en', quality: 1 }).then(function (geojson) {
-//         var regions = ymaps.geoQuery(geojson);
+//         const regions = ymaps.geoQuery(geojson);
 //         regions.search('properties.iso3166 = "US"').setOptions('fillColor', '#FFEE2E').addToMap(map);
 //     });
 //     ymaps.borders.load('001', { lang: 'en', quality: 1 }).then(function (geojson) {
-//         var regions = ymaps.geoQuery(geojson);
+//         const regions = ymaps.geoQuery(geojson);
 //         regions.search('properties.iso3166 = "CN"').setOptions('fillColor', '#FFEE2E').addToMap(map);
 //     });
 // })

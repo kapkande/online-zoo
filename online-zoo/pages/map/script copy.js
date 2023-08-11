@@ -1,15 +1,15 @@
 ymaps.ready(['polylabel.create']).then(function () {
     // Создадим два макета подписей полигонов: с текстом и с картинкой.
-    var textLayouts = {
+    const textLayouts = {
         label: '<div>{{properties.hintContent}}</div>',
         hint: ymaps.templateLayoutFactory.createClass('<div>{{properties.hintContent}}</div>')
     };
-    var imgLayouts = {
+    const imgLayouts = {
         // В свойстве regionName содержится название региона.
         label: '<img src="images/{{properties.regionName}}.png" height="50px"/>',
         hint: ymaps.templateLayoutFactory.createClass('<img src="images/{{properties.regionName}}.png" height="50px"/>')
     };
-    var map = new ymaps.Map('map', {
+    const map = new ymaps.Map('map', {
         center: [58, 40],
         zoom: 5,
         controls: []
@@ -19,7 +19,7 @@ ymaps.ready(['polylabel.create']).then(function () {
     });
 
     // Создадим переключатель вида подписей.
-    var typeList = new ymaps.control.ListBox({
+    const typeList = new ymaps.control.ListBox({
         data: {
             content: 'Тип подписи'
         },
@@ -57,13 +57,13 @@ ymaps.ready(['polylabel.create']).then(function () {
         .add(zoomControl);
 
     // Создадим менеджер объектов.
-    var objectManager = new ymaps.ObjectManager();
+    const objectManager = new ymaps.ObjectManager();
     // Загрузим регионы.
     ymaps.borders.load('RU', {
         lang: 'ru',
         quality: 2
     }).then(function (result) {
-        var options = {
+        const options = {
             // Стандартный вид текста будет темный с белой обводкой.
             labelDefaults: 'dark',
             // Макет подписи.
@@ -94,16 +94,16 @@ ymaps.ready(['polylabel.create']).then(function () {
         map.geoObjects.add(objectManager);
 
         // Запускаем модуль подписей.
-        var polylabel = new ymaps.polylabel.create(map, objectManager);
+        const polylabel = new ymaps.polylabel.create(map, objectManager);
 
         // Подписываемся на события подписей.
         objectManager.events.add(['labelmouseenter', 'labelmouseleave'], function (event) {
             // Получаем полигон, на котором произошло событие.
-            var polygon = objectManager.objects.getById(event.get('objectId'));
+            const polygon = objectManager.objects.getById(event.get('objectId'));
             // Получаем состояние подписи.
-            var state = polylabel.getLabelState(polygon);
+            const state = polylabel.getLabelState(polygon);
             // Получаем проекцию позиции подписи, чтобы показать на этом месте всплывающую подсказку.
-            var centerProj = map.options.get('projection').toGlobalPixels(state.get('center'), map.getZoom());
+            const centerProj = map.options.get('projection').toGlobalPixels(state.get('center'), map.getZoom());
             if (event.get('type') === 'labelmouseenter' && state.get('currentVisibility') === 'dot') {
                 objectManager.objects.hint.open(polygon.id, centerProj);
             } else {
@@ -114,7 +114,7 @@ ymaps.ready(['polylabel.create']).then(function () {
 
     // Функция, которая обновляет у всех полигонов макет.
     function updateLabels(type) {
-        var layouts = type === 'text' ? textLayouts : imgLayouts;
+        const layouts = type === 'text' ? textLayouts : imgLayouts;
         // Меняем всплывающую подсказку в зависимости от макета.
         objectManager.objects.options.set({
             hintContentLayout: layouts.hint
