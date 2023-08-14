@@ -1,0 +1,50 @@
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+
+
+.video__asideBar-item {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+}
+
+.video__asideBar {
+    height: 652px;
+    width: 99px;
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+}
+
+.asideBar__item-0 {
+    transform: translate(10%, 0%);
+}
+
+.asideBar__item-1 {
+    transform: translate(10%, 104%);
+}
+
+.asideBar__item-2 {
+    transform: translate(10%, 208%);
+}
+
+.asideBar__item-3 {
+    transform: translate(10%, 312%);
+}
+
+.asideBar__item-4 {
+    transform: translate(10%, 416%);
+}
+
+.asideBar__item-5 {
+    transform: translate(10%, 518%);
+}
+
+.asideBar__item-arrow {
+    transform: translate(10%, 622%);
+}
+

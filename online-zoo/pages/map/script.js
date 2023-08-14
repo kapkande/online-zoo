@@ -100,7 +100,8 @@ function init() {
     }, {
         // suppressMapOpenBlock: true,
         // restrictMapArea: [[55.45, 37.20], [56.00, 38.00]]
-        backgroundColor: '#f5f5f5'
+        backgroundColor: '#f5f5f5',
+        // restrictMapArea: [[-180, 90], [180, -90]],
     });
     document.querySelector('.ymaps-2-1-79-gototech')?.remove();
     document.querySelector('.ymaps-2-1-79-controls__control')?.remove();
@@ -221,6 +222,26 @@ function createPlacemarks(map) {
     );
     map.geoObjects.add(congo);
 
+
+    const congoPhono = new ymaps.Placemark(
+        [-4.16, 15.17],
+        {
+            name: '',
+            cantry: 'Congo',
+            link: '',
+
+        },
+        {
+            iconLayout: 'default#image',
+            iconImageHref: '../../assets/icons/map/gorilla.svg',
+            balloonContentLayout: Element,
+            iconImageOffset: [-30, -40]
+        }
+    );
+    // map.geoObjects.add(congoPhono);
+
+
+
     const alligator = new ymaps.Placemark(
         [27.30, -81.48],
         {
@@ -231,11 +252,29 @@ function createPlacemarks(map) {
         {
             iconLayout: 'default#image',
             iconImageHref: '../../assets/icons/map/greenVector.svg',
-            // iconImageHref: '../../assets/icons/map/alligator.svg',
             balloonContentLayout: Element,
         },
     );
     map.geoObjects.add(alligator);
+
+    const alligatorPhoto = new ymaps.Placemark(
+        [27.30, -81.48],
+        {
+            name: 'Alligator',
+            cantry: "Florida, USA",
+            link: '',
+        },
+        {
+            iconLayout: 'default#image',
+            iconImageHref: '../../assets/icons/map/lonely-crocodile.png',
+            balloonContentLayout: Element,
+            iconImageOffset: [-30, -40],
+            // icon_imagesize: [1, 1]
+        },
+    );
+    // map.geoObjects.add(alligatorPhoto);
+
+
 
     const eagle = new ymaps.Placemark(
         [35, -115.48],
@@ -251,6 +290,10 @@ function createPlacemarks(map) {
         }
     );
     map.geoObjects.add(eagle);
+
+
+
+
 
     const panda = new ymaps.Placemark(
         [30, 110],
