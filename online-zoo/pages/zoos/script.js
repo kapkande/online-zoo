@@ -1,6 +1,6 @@
 const imeges = document.querySelectorAll('.video__asideBar-item');
 (() => {
-    const arrIcons = ['garila', 'alligator', 'garila', 'garila', 'garila', 'garila', 'sidebar_icon', 'garila']
+    const arrIcons = ['gorilla', 'alligator', 'gorilla', 'gorilla', 'gorilla', 'gorilla', 'sidebar_icon', 'gorilla']
     imeges.forEach((e, i) => {
         if (!arrIcons[i]) { return }
         e.classList.add(`asideBar__item-${i}`)
@@ -19,7 +19,7 @@ const imeges = document.querySelectorAll('.video__asideBar-item');
             let url = new URL(window.location.protocol + "//" + window.location.host + window.location.pathname)
             url.searchParams.set('bord', arrIcons[i])
             window.history.replaceState({}, '', `${url.href}`)
-
+            checkQuery()
         })
 
         if (i == 6) {
