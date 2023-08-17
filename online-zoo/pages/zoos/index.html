@@ -59,8 +59,8 @@
             </div>
         </header>
         <section class="video">
-            <div class="video__title"></div>
-            <div class="video__viewBlock">
+
+            <div class="video__videoBlock">
                 <aside class="video__asideBar">
                     <button class="video__asideBar-item"></button>
                     <button class="video__asideBar-item"></button>
@@ -70,9 +70,20 @@
                     <button class="video__asideBar-item"></button>
                     <button class="video__asideBar-arrow"></button>
                 </aside>
-                <div class="video__view"></div>
-            </div>
+                <div class="video__viewBlock">
+                    <div class="video__title"></div>
+                    <iframe class="video__view" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
 
+            </div>
+            <div class="video__choiceVideo">
+                <button class="video__choiceVideo__back"></button>
+                <div class="video__choiceVideoBlock"></div>
+                <button class="video__choiceVideo__ahead"></button>
+            </div>
 
         </section>
         <section class="info">
@@ -84,7 +95,7 @@
                     <button class="info__brief__button"></button>
                 </div>
             </div>
-            
+
         </section>
         <footer class="footer">
             <div class="wrap">
@@ -208,7 +219,7 @@
     <script src="./obj.js"></script>
     <script src="./checkQuery.js"></script>
     <script src="./script.js"></script>
-    
+
 </body>
 
 </html>

@@ -48,3 +48,51 @@ button {
     transform: translate(10%, 622%);
 }
 
+.video__title {
+    color: rgba(51, 59, 65, 1);
+    font-size: 48px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.video__view {
+    width: 1160px;
+    height: 652px;
+}
+
+.video__videoBlock {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.video__choiceVideo__back {
+    background-image: url(../../assets/icons/zoos/arrow.svg);
+    width: 62px;
+    height: 62px;
+}
+
+.video__choiceVideo__ahead {
+    background-image: url(../../assets/icons/zoos/arrow.svg);
+    width: 62px;
+    height: 62px;
+    transform: scaleX(-1);
+}
+
+.video__choice__item {
+    width: 267px;
+    height: 210px;
+}
+
+.video__choiceVideoBlock {
+    display: flex;
+}
+
+.video__choiceVideo {
+    display: flex;
+    align-items: center;
+}
+.video__choice__item{
+    background-repeat: no-repeat;
+}
