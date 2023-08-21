@@ -47,6 +47,10 @@ button {
     transform: translate(10%, 518%);
 }
 
+.asideBar__item-6,
+.asideBar__item-7 {
+    opacity: 0;
+}
 
 
 .video__title {
@@ -69,20 +73,25 @@ button {
 
 }
 
-.video__choiceVideo__back {
-    background-image: url(../../assets/icons/zoos/arrow.svg);
-    width: 62px;
-    height: 62px;
-}
 
+.video__choiceVideo__back,
 .video__choiceVideo__ahead {
     background-image: url(../../assets/icons/zoos/arrow.svg);
+    background-position: center;
+    background-color: #FE9013;
     width: 62px;
     height: 62px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.video__choiceVideo__back:hover,
+.video__choiceVideo__ahead:hover{
+    background-color: #4B9200;
+} 
+.video__choiceVideo__ahead {
     transform: scaleX(-1);
 }
-
-
 
 .video__choiceVideoBlock {
     display: flex;
@@ -135,6 +144,25 @@ button {
 .asideBar__item__alligator.iconActive,
 .asideBar__item__alligator-target {
     background-image: url(../../assets/icons/zoos/alligator-active.svg);
+}
+
+.asideBar__item__panda {
+    background-image: url(../../assets/icons/zoos/panda.svg);
+}
+
+.asideBar__item__panda.iconActive,
+.asideBar__item__panda-target {
+    background-image: url(../../assets/icons/zoos/panda-active.svg);
+}
+
+
+.asideBar__item__eagle {
+    background-image: url(../../assets/icons/zoos/eagle.svg);
+}
+
+.asideBar__item__eagle.iconActive,
+.asideBar__item__eagle-target {
+    background-image: url(../../assets/icons/zoos/eagle-active.svg);
 }
 
 .video__asideBar-arrow {

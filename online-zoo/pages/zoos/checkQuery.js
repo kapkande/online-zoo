@@ -1,13 +1,15 @@
+function getNameOfAnimal() {
+    const nameOfAnimal = document.location.href.split('?bord=')[1];
+    if (!nameOfAnimal) { return 'gorilla' };
+    return nameOfAnimal;
+}
 function getTargetDate() {
-
-    let nameOfAnimal = document.location.href.split('?bord=')[1];
-    if (!nameOfAnimal) { nameOfAnimal = 'gorilla' };
-    let targetDate = date[nameOfAnimal];
+    let targetDate = date[getNameOfAnimal()];
     if (!targetDate) { targetDate = date.gorilla };
     return targetDate;
-
-
 }
+
+
 
 createIconsVideo()
 
