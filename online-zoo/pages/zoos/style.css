@@ -1,13 +1,32 @@
 body {
     margin: 0;
 }
+
 button {
     padding: 0;
     border: none;
     font: inherit;
     color: inherit;
     background-color: transparent;
+
 }
+
+.button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #FE9013;
+    border-radius: 25px;
+    width: 298px;
+    height: 54px;
+    cursor: pointer;
+}
+
 .body-shadow {
     overflow: hidden
 }
@@ -152,7 +171,7 @@ button {
 }
 
 .footer__icon-Twitter {
-    background-image: url("./src/assets/icons/footer/twitter.svg" );
+    background-image: url("./src/assets/icons/footer/twitter.svg");
 }
 
 .footer__icon-Instagram {
@@ -177,7 +196,6 @@ button {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     border-radius: 5px;
 }
 
@@ -286,17 +304,14 @@ button {
     color: #E47209;
 }
 
-.button:hover {
-    background: linear-gradient(113.96deg, #E47209 100%, #E47209 100%);
-    transition: all 0.5s;
-}
+
 
 .link:active {
     color: #4B9200;
 }
 
 .button:active {
-    background: linear-gradient(113.96deg, #4B9200 100%, #4B9200 100%);
+    background-color: #4B9200;
     transition: all 0.5s;
 }
 
@@ -744,6 +759,7 @@ input[type="number"]:focus:valid+label {
 .active {
     color: orange;
 }
+
 p {
     margin: 0;
 }

@@ -1,9 +1,11 @@
 const date = {
     gorilla: {
         title: 'Gorilla camera',
+        subtitle:'Western Lowland Gorilla',
         video: ['https://www.youtube.com/embed/ODyB9i6bGwQ', 'https://www.youtube.com/embed/wDECqJsiGqw', 'https://www.youtube.com/embed/cf1Pw3WIb4w', 'https://www.youtube.com/embed/4bxwB4jD_Eg'],
         photoFromVideo: ['../../assets/imeges/zoos/garillaForSlider-0.jpg','../../assets/imeges/zoos//garillaForSlider-1.jpg','../../assets/imeges/zoos//garillaForSlider-2.jpg','../../assets/imeges/zoos//garillaForSlider-3.jpg',],
-        briefImage:'',
+        briefImage:'../../assets/imeges/zoos/garillaBref.png',
+        briefText:'Giant pandas are very unusual animals that eat almost exclusively bamboo, which is very low in nutrients. Because of this, they have many unique adaptations for their low-energy lifestyle. Giant pandas are solitary, with males and females coming together only briefly to mate. Habitat loss is the primary threat to this species. Its popularity around the world has helped the giant panda become the focus of successful conservation programs.',
         text: [['Diet:', 'Herbivore (We provide a medley of fruits and vegetables to our western lowland gorillas)'],
          ['Range: ', 'Western Africa [VIEW MAP]'],
          ['Habitat: ', 'Rainforests (Simulation of the natural environment)'],

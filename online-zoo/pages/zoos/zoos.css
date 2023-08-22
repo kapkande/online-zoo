@@ -1,13 +1,3 @@
-button {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-}
-
-
-
 .video__asideBar-item,
 .video__asideBar-arrow {
     width: 80px;
@@ -85,10 +75,12 @@ button {
     border-radius: 50%;
     cursor: pointer;
 }
+
 .video__choiceVideo__back:hover,
-.video__choiceVideo__ahead:hover{
-    background-color: #4B9200;
-} 
+.video__choiceVideo__ahead:hover {
+    /* background-color: #4B9200; */
+}
+
 .video__choiceVideo__ahead {
     transform: scaleX(-1);
 }
@@ -182,15 +174,48 @@ button {
     font-weight: 400;
     line-height: 42px;
     letter-spacing: 0em;
-
-
 }
 
 .info__text {
-
+    padding: 5px 0;
     font-family: Roboto;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     letter-spacing: 0em;
+}
+
+.info__brief__image {
+    width: 422px;
+    height: 421px;
+    flex: 1 0 422px;
+}
+
+.info__briefBlok {
+    display: flex;
+}
+
+.info__brief__textBlock {
+    padding: 0 5%;
+    font-family: Roboto;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+    color: #ABABAB;
+
+}
+
+.info__brief__button {
+    margin: 7% 7% 2% 0;
+}
+.info__title{
+    color: rgba(75, 146, 0, 1);
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 58px;
+    letter-spacing: 0em;
+
+    
 }

@@ -9,8 +9,6 @@ function getTargetDate() {
     return targetDate;
 }
 
-
-
 createIconsVideo()
 
 createTextBlock(getTargetDate())
@@ -18,10 +16,11 @@ setUrlForIcons(getTargetDate())
 
 
 function createTextBlock(targetDate) {
+    craftebriefBlok(targetDate)
     const title = document.querySelector('.video__title');
     title.textContent = targetDate.title;
 
-    const info = document.querySelector('.info');
+    const info = document.querySelector('.info .wrap');
     document.querySelector('.info__textBlock')?.remove();
 
     const textBlock = document.createElement('div');
@@ -73,4 +72,16 @@ function createIconsVideo() {
         item.classList.add('video__choice__item');
         choiceVideoBlock.appendChild(item);
     }
+}
+
+function craftebriefBlok(targetDate) {
+    const infoTitle = document.querySelector('.info__title');
+    infoTitle.textContent = targetDate.subtitle;
+
+    const briefImage = document.querySelector('.info__brief__image');
+    briefImage.style.backgroundImage = `url(${targetDate.briefImage})`;
+
+    
+    const briefText = document.querySelector('.info__brief__text');
+    briefText.textContent = targetDate.briefText;
 }

@@ -276,19 +276,12 @@
     color: #E47209;
 }
 
-.button:hover {
-    background: linear-gradient(113.96deg, #E47209 100%, #E47209 100%);
-    transition: all 0.5s;
-}
+
 
 .link:active {
     color: #4B9200;
 }
 
-.button:active {
-    background: linear-gradient(113.96deg, #4B9200 100%, #4B9200 100%);
-    transition: all 0.5s;
-}
 
 .header__nav__item:hover {
     background: transparent;

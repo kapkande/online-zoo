@@ -31,9 +31,10 @@ const asideBar = document.querySelector('.video__asideBar');
             e.classList.remove(`asideBar__item__${arrIcons[i]}-target`);
         });
 
-        let url = new URL(window.location.protocol + "//" + window.location.host + window.location.pathname);
 
         e.addEventListener('click', () => {
+            let url = new URL(window.location.protocol + "//" + window.location.host + window.location.pathname);
+
             url.searchParams.set('bord', arrIcons[i]);
             window.history.replaceState({}, '', `${url.href}`);
             document.querySelector('.iconActive').classList.remove('iconActive')
@@ -42,9 +43,10 @@ const asideBar = document.querySelector('.video__asideBar');
             const targetDate = getTargetDate();
             createTextBlock(targetDate);
             setUrlForIcons(targetDate);
+            url.searchParams.set('bord', arrIcons[i]);
+        window.history.replaceState({}, '', `${url.href}`);
         })
 
-        url.searchParams.set('bord', arrIcons[i]);
-        window.history.replaceState({}, '', `${url.href}`);
+        
     });
 })();
