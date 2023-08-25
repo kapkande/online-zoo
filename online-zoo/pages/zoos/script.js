@@ -34,7 +34,6 @@ const asideBar = document.querySelector('.video__asideBar');
 
         e.addEventListener('click', () => {
             let url = new URL(window.location.protocol + "//" + window.location.host + window.location.pathname);
-
             url.searchParams.set('bord', arrIcons[i]);
             window.history.replaceState({}, '', `${url.href}`);
             document.querySelector('.iconActive').classList.remove('iconActive')
@@ -45,8 +44,6 @@ const asideBar = document.querySelector('.video__asideBar');
             setUrlForIcons(targetDate);
             url.searchParams.set('bord', arrIcons[i]);
         window.history.replaceState({}, '', `${url.href}`);
-        })
-
-        
+        })        
     });
 })();

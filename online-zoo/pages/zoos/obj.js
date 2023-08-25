@@ -28,8 +28,11 @@ const date = {
     },
     alligator: {
         title: 'Alligator camera',
+        subtitle:'Alligator',
         video: ['https://www.youtube.com/embed/X5Im4mMFK4A', 'https://www.youtube.com/embed/SlLuC7257pc', 'https://www.youtube.com/embed/_bVZeOt7bCw', 'https://www.youtube.com/embed/Sm9oYDVWZY4'],
         photoFromVideo: ['../../assets/imeges/zoos//alligatorForSlider-0.jpg','../../assets/imeges/zoos//alligatorForSlider-1.jpg','../../assets/imeges/zoos//alligatorForSlider-2.jpg','../../assets/imeges/zoos//alligatorForSlider-3.jpg',],
+        briefImage:'../../assets/imeges/zoos/alligatorBref.png',
+        briefText:`Alligators differ from other members of the crocodile family in having a wider snout; their eyes are more dorsal (at the top of the head). Large alligators' eyes glow red; small alligators' eyes glow green. Alligators can be spotted in the dark by this sign.`,
         text: [['Diet:', 'Herbivore (We provide a medley of fruits and vegetables to our western lowland gorillas)'],
          ['Range: ', 'Western Africa'],
          ['Habitat: ', 'Rainforests (Simulation of the natural environment)'],
@@ -52,8 +55,11 @@ const date = {
     },
     panda: {
         title: 'Panda camera',
+        subtitle:'Giant Panda',
         video: ['https://www.youtube.com/embed/YdP2fFyjBWQ','https://www.youtube.com/embed/5-gHTvVB4RM','https://www.youtube.com/embed/unKI78hW6LI','https://www.youtube.com/embed/vcz7_PZyT-A'],
         photoFromVideo: ['../../assets/imeges/zoos//pandaForSlider-0.jpg','../../assets/imeges/zoos//pandaForSlider-1.jpg','../../assets/imeges/zoos//pandaForSlider-2.jpg','../../assets/imeges/zoos//pandaForSlider-3.jpg',],
+        briefImage:'../../assets/imeges/zoos/pandaBref.png',
+        briefText:'Giant pandas are very unusual animals that eat almost exclusively bamboo, which is very low in nutrients. Because of this, they have many unique adaptations for their low-energy lifestyle. Giant pandas are solitary, with males and females coming together only briefly to mate. Habitat loss is the primary threat to this species. Its popularity around the world has helped the giant panda become the focus of successful conservation programs.',
         text: [['Diet:', 'Herbivore (We provide a medley of fruits and vegetables to our western lowland gorillas)'],
          ['Range: ', 'Western Africa'],
          ['Habitat: ', 'Rainforests (Simulation of the natural environment)'],
@@ -76,8 +82,21 @@ const date = {
     },
     eagle: {
         title: 'Eagle camera',
+        subtitle:'Eagle',
         video: ['https://www.youtube.com/embed/DW-BSDZ7iqc','https://www.youtube.com/embed/A6H2ZdrKmzc','https://www.youtube.com/embed/eN4Qy5RRpsc','https://www.youtube.com/embed/RILkBqPVSEY'],
         photoFromVideo: ['../../assets/imeges/zoos//eagleForSlider-0.jpg','../../assets/imeges/zoos//eagleForSlider-1.jpg','../../assets/imeges/zoos//eagleForSlider-2.jpg','../../assets/imeges/zoos//eagleForSlider-3.jpg',],
-        text: [[]]
+        briefImage:'../../assets/imeges/zoos/eagleBref.png',
+        briefText:'There are about 40 species of these birds in the world. The largest eagle is the Golden Eagle. It reaches a length of 95 cm and a wingspan of over two meters. Its plumage ranges from golden to t. brown. They nest exclusively in mountainous areas. They hunt in pairs and mainly during daylight hours. They feed on birds, squirrels, martens, hares and even larger animals.',
+
+        text: [
+            ['Diet:','Carnivore (Fish, lizards, snakes, mice)'],
+            ['Range:','Eurasia and Africa [VIEW MAP]'],
+            ['Habitat:','Mountainous or semi-open landscapes (Simulation of the natural environment) '],
+            ['General Information:','Eagles choose a mate for life. They build large and strong nests, using branches. They lay two eggs each. While the female incubates them, the male takes care of her feeding. The hatched offspring can be seen immediately, and are covered with down. The nature of the predator forces the chicks from a young age to fight for their survival. Often one can observe the larger chick trying to push the younger brother out of the nest. Sometimes it may even kill it by fighting for food. In cases where there is enough food, several chicks grow in the nests.'],
+            ['Physical features and characteristics:','The eagle is a bird of prey in the hawk family. It is one of the largest birds. The body length of an adult bird varies from 73 to 89 cm, with long wings up to 2.5 m in wingspan, a short tail and strong paws. The massive beak and sharp claws are the main weapons of this raptor.', 'Excellent vision allows the eagle to spot a mouse, snake, or lizard from a great height. The eyeball is large and occupies a lot of space in the skull, so eye mobility is low, but the well-developed neck makes up for this disadvantage. Eagles use their hearing more for communication than for hunting. The sense of smell is poorly developed.'],
+            ['Lifestyle and reproduction:','Eagles choose a mate for life. They build large and strong nests, using branches. They lay two eggs each. While the female incubates them, the male takes care of her feeding. The hatched offspring can be seen immediately, and are covered with down. The nature of the predator forces the chicks from a young age to fight for their survival. Often one can observe the larger chick trying to push the younger brother out of the nest. Sometimes it may even kill it by fighting for food. In cases where there is enough food, several chicks grow in the nests.'],
+            ['Habitat:','They can be found in the forests, tundras, steppes, and even deserts of Eurasia, North America, and Africa.'],
+            ['Diet:','They usually hunt alone. The eagle may hover for a long time at a high altitude, looking for prey, or sit on an elevated position and observe the surroundings in search of prey. As a rule, only killed prey goes as food, carrion rarely makes it into their diet. It all depends on the type of bird. It can be both insects and large mammals. At the moment of attack, the eagle sharply lowers down, grabs the victim with its paws and strikes it with its beak. The stunned creature is no longer able to resist.'],
+            ]
     }
 }

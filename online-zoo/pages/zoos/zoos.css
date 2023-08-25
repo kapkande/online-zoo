@@ -189,6 +189,8 @@
     width: 422px;
     height: 421px;
     flex: 1 0 422px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .info__briefBlok {
@@ -209,7 +211,8 @@
 .info__brief__button {
     margin: 7% 7% 2% 0;
 }
-.info__title{
+
+.info__title {
     color: rgba(75, 146, 0, 1);
     font-family: Roboto;
     font-size: 48px;
@@ -217,5 +220,43 @@
     line-height: 58px;
     letter-spacing: 0em;
 
-    
+
+}
+
+.info__textBlock-trans {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.info__text {
+    position: relative;
+}
+
+.info__textBlock__trans {
+    width: inherit;
+    position: absolute;
+    height: 80px;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    transition: 1s;
+    width: 100%;
+}
+
+
+.info__button {
+    width: 129px;
+    height: 42px;
+    border-radius: 5px;
+    border: 1px solid #333B41;
+}
+
+.info__button:hover {
+    color: #E47209;
+    border: 1px solid #E47209;
+}
+.info__button:hover {
+    color: green;
+    border: 1px solid green;
 }

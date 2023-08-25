@@ -26,6 +26,9 @@ function createTextBlock(targetDate) {
     const textBlock = document.createElement('div');
     textBlock.classList.add("info__textBlock");
 
+    const text = document.createElement('div');
+    text.classList.add("info__text");
+
     targetDate.text.forEach(element => {
         const item = document.createElement('div');
         item.classList.add('info__textBlock__item')
@@ -37,11 +40,35 @@ function createTextBlock(targetDate) {
 
         createDivElement(element.slice(1), item, subtitle)
 
-        textBlock.appendChild(item);
-        info.appendChild(textBlock)
+        text.appendChild(item);
+        textBlock.appendChild(text)
 
     });
+    const trans = document.createElement('div');
+    trans.classList.add('info__textBlock__trans');
+    textBlock.appendChild(trans);
+    textBlock.classList.add('info__textBlock-trans');
+    info.appendChild(textBlock);
 
+    document.querySelector('.info__button')?.remove()
+    createButton(info, textBlock)
+ 
+}
+
+function createButton(info, textBlock) {
+    const button = document.createElement('button');
+    button.classList.add('info__button');
+    button.textContent = 'Read More';
+    info.appendChild(button);
+
+    button.addEventListener('click', (e) => {
+        textBlock.classList.toggle('info__textBlock-trans');
+        if (textBlock.classList.contains('info__textBlock-trans')) {
+            button.textContent = 'Read More';
+            return;
+        }
+        button.textContent = 'Read Less';
+    })
 }
 
 function createDivElement(arr, item) {
@@ -51,7 +78,7 @@ function createDivElement(arr, item) {
         text.innerHTML = e;
         item.appendChild(text);
     });
-
+   
 }
 
 function setUrlForIcons(targetDate) {
@@ -81,7 +108,7 @@ function craftebriefBlok(targetDate) {
     const briefImage = document.querySelector('.info__brief__image');
     briefImage.style.backgroundImage = `url(${targetDate.briefImage})`;
 
-    
+
     const briefText = document.querySelector('.info__brief__text');
     briefText.textContent = targetDate.briefText;
 }
