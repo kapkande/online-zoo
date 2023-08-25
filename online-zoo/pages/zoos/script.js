@@ -47,3 +47,4 @@ const asideBar = document.querySelector('.video__asideBar');
         })        
     });
 })();
+

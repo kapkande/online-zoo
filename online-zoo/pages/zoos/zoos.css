@@ -256,7 +256,13 @@
     color: #E47209;
     border: 1px solid #E47209;
 }
+
 .info__button:hover {
     color: green;
     border: 1px solid green;
+}
+
+.info {
+    background: url(../../assets/imeges/palm_foto.png) bottom left no-repeat, url(../../assets/imeges/strelitzia.png) right bottom no-repeat;
+    padding-bottom: 25%;
 }

@@ -11,9 +11,10 @@ function getTargetDate() {
 
 createIconsVideo()
 
-createTextBlock(getTargetDate())
-setUrlForIcons(getTargetDate())
-
+const targetDate = getTargetDate();
+createTextBlock(targetDate);
+setUrlForIcons(targetDate);
+setBottonImage(targetDate);
 
 function createTextBlock(targetDate) {
     craftebriefBlok(targetDate)
@@ -50,8 +51,8 @@ function createTextBlock(targetDate) {
     textBlock.classList.add('info__textBlock-trans');
     info.appendChild(textBlock);
 
-    document.querySelector('.info__button')?.remove()
-    createButton(info, textBlock)
+    document.querySelector('.info__button')?.remove();
+    createButton(info, textBlock);
  
 }
 
@@ -111,4 +112,9 @@ function craftebriefBlok(targetDate) {
 
     const briefText = document.querySelector('.info__brief__text');
     briefText.textContent = targetDate.briefText;
+}
+
+function setBottonImage(targetDate) {
+    const image = document.querySelector('#bottomImage');
+    image.src = targetDate.imageBotton
 }
