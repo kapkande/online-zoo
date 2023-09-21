@@ -94,9 +94,11 @@ const key = '47c6f5ec-fc30-40a6-b27c-55b158578b77'
 
 ymaps.ready(init)
 function init() {
+    const screenWidth = window.screen.width > 939 ? 3 : window.screen.width > 639 ? 2 : 1;
+    console.log(screenWidth);
     const map = new ymaps.Map("map", {
         center: [25, 10],
-        zoom: 3
+        zoom: screenWidth
     }, {
         // suppressMapOpenBlock: true,
         // restrictMapArea: [[55.45, 37.20], [56.00, 38.00]]
@@ -105,7 +107,9 @@ function init() {
     });
     document.querySelector('.ymaps-2-1-79-gototech')?.remove();
     document.querySelector('.ymaps-2-1-79-controls__control')?.remove();
-
+    document.querySelector('.ymaps-2-1-79-controls__toolbar_left')?.remove();
+    document.querySelector('.ymaps-2-1-79-controls__toolbar_right')?.remove();
+    
     // ymaps.borders.load("001", {
     //     lang: "en",
     //     quality: 2

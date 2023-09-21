@@ -25,7 +25,6 @@ function swopUnderSlider(e) {
         document.querySelector('.video__choice__item-active')?.classList.remove('video__choice__item-active')
         flag = flag - 1 < 0 ? 3 : flag - 1
         videoitems[flag].classList.add('video__choice__item-active');
-        console.log(flag);
     }else if ('video__choiceVideo__ahead button'.includes(targer.className)) {
         document.querySelector('.video__choice__item-active')?.classList.remove('video__choice__item-active')
         flag =  flag + 1 > 3 ? 0 : flag + 1

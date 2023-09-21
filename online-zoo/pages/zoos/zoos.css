@@ -11,30 +11,32 @@
     height: 652px;
     width: 99px;
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    margin: 0 6% 3px 0;
+
 }
 
 .asideBar__item-0 {
-    transform: translate(10%, 0%);
+    transform: translate(10%, 20%);
 }
 
 .asideBar__item-1 {
-    transform: translate(10%, 104%);
+    transform: translate(10%, 133%);
 }
 
 .asideBar__item-2 {
-    transform: translate(10%, 208%);
+    transform: translate(10%, 245%);
 }
 
 .asideBar__item-3 {
-    transform: translate(10%, 312%);
+    transform: translate(10%, 356%);
 }
 
 .asideBar__item-4 {
-    transform: translate(10%, 416%);
+    transform: translate(10%, 470%);
 }
 
 .asideBar__item-5 {
-    transform: translate(10%, 518%);
+    transform: translate(10%, 583%);
 }
 
 .asideBar__item-6,
@@ -49,6 +51,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
+    margin-bottom: 15px;
 }
 
 .video__view {
@@ -58,9 +61,9 @@
 
 .video__videoBlock {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-end;
-
+    margin: 2.4% 0 0 0;
 }
 
 
@@ -96,11 +99,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 5%;
 }
 
 .video__choice__item {
     background-repeat: no-repeat;
-    width: 267px;
+    width: 260px;
     height: 180px;
     background-position: center;
     cursor: pointer;
@@ -159,7 +163,7 @@
 
 .video__asideBar-arrow {
     background-image: url(../../assets/icons/zoos/sidebarArrow.svg);
-    transform: translate(10%, 622%);
+    transform: translate(10%, 695%);
     background-repeat: no-repeat;
 }
 
@@ -219,7 +223,7 @@
     font-weight: 500;
     line-height: 58px;
     letter-spacing: 0em;
-
+    margin: 5% 0 3% 0;
 
 }
 
@@ -264,6 +268,7 @@
 
 .info {
     background: url(../../assets/imeges/palm_foto.png) bottom left no-repeat, url(../../assets/imeges/strelitzia.png) right bottom no-repeat;
+<<<<<<< HEAD
     padding-bottom: 25%;
 }
 
@@ -289,6 +294,23 @@
 }
 
 @media (max-width: 1299px) {
+=======
+    padding-bottom: 13%;
+}
+
+#bottomImage {
+    height: 390px;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.video .wrap {
+    max-width: 1541px;
+}
+
+
+@media (max-width: 1455px) {
+>>>>>>> 323461776f39a8ea461e0d410d4a1748be432d71
     .video__view {
         width: 778px;
         height: 438px;
@@ -307,6 +329,7 @@
         background-size: contain;
     }
 
+<<<<<<< HEAD
     .video__choiceVideoBlock {
         display: none;
     }
@@ -420,5 +443,41 @@
     }
     .info__brief__textBlock{
         font-size: 20px;
+=======
+    .video__asideBar {
+        margin: 0 9.5% 3px 0;
+    }
+
+    .asideBar__item-0 {
+        transform: translate(19%, 20%);
+    }
+
+    .asideBar__item-1 {
+        transform: translate(19%, 136%);
+    }
+
+    .asideBar__item-2 {
+        transform: translate(19%, 253%);
+    }
+
+    .asideBar__item-3 {
+        transform: translate(19%, 369%);
+    }
+
+    .asideBar__item-4 {
+        transform: translate(19%, 489%);
+    }
+
+    .asideBar__item-5 {
+        transform: translate(19%, 606%);
+    }
+
+    .video__title {
+        margin-bottom: 11px;
+    }
+
+    .video__asideBar-arrow {
+        transform: translate(19%, 724%);
+>>>>>>> 323461776f39a8ea461e0d410d4a1748be432d71
     }
 }
