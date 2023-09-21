@@ -116,5 +116,5 @@ function craftebriefBlok(targetDate) {
 
 function setBottonImage(targetDate) {
     const image = document.querySelector('#bottomImage');
-    image.src = targetDate.imageBotton
+    image.style.backgroundImage = `url(${targetDate.imageBotton})`
 }

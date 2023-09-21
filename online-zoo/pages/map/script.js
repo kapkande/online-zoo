@@ -209,9 +209,9 @@ function createPlacemarks(map) {
     const congo = new ymaps.Placemark(
         [-4.16, 15.17],
         {
-            name: '',
+            name: 'Gorilla',
             cantry: 'Congo',
-            link: '',
+            link: '../zoos/index.html?bord=gorilla',
 
         },
         {
@@ -247,7 +247,7 @@ function createPlacemarks(map) {
         {
             name: 'Alligator',
             cantry: "Florida, USA",
-            link: '',
+            link: '../zoos/index.html?bord=alligator',
         },
         {
             iconLayout: 'default#image',
@@ -281,7 +281,7 @@ function createPlacemarks(map) {
         {
             name: 'Eagle',
             cantry: "Eldorado National Forest, USA",
-            link: '',
+            link: '../zoos/index.html?bord=eagle',
         },
         {
             iconLayout: 'default#image',
@@ -300,7 +300,7 @@ function createPlacemarks(map) {
         {
             name: 'Panda',
             cantry: "China",
-            link: '',
+            link: '../zoos/index.html?bord=panda',
         },
         {
             iconLayout: 'default#image',
@@ -371,3 +371,31 @@ function createPlacemarks(map) {
 //         regions.search('properties.iso3166 = "CN"').setOptions('fillColor', '#FFEE2E').addToMap(map);
 //     });
 // })
+const onMenuClick = (even) => {
+
+    const target = even.target;
+    const popup = document.querySelector('.popup');
+    const whadow = document.querySelector('.popup, .popup-active')
+    const body = document.querySelector('body')
+    const header = document.querySelector('header')
+    const isAccountBTN = ['header__burger', 'header__burger__line'].includes(target.className);
+    const isShadow = ['popup popup-active'].includes(target.className);
+    const isPopupCross = ['popup__cross', 'popup__cross__line'].includes(target.className);
+    if (isAccountBTN || isPopupCross) {
+        popup.classList.toggle("popup-active")
+        header.classList.toggle("header-active")
+        body.classList.toggle('body-shadow')
+    } else if (isShadow) {
+        console.log(11);
+        popup.classList.toggle("popup-active")
+        header.classList.toggle("header-active")
+        body.classList.toggle('body-shadow')
+    }
+
+
+
+}
+const headerBurger = document.querySelector('.header__burger')
+const Shadow = document.querySelector('.popup, .popup-active')
+const clickMenuBurger = headerBurger.addEventListener('click', onMenuClick);
+const clickShadow = Shadow.addEventListener('click', onMenuClick);

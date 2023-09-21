@@ -641,7 +641,9 @@ input[type="number"]:focus:valid+label {
     .footer__contacts-designed {
         padding: 10px 10px 0 0px;
     }
-
+    li {
+        list-style-type: none;
+    }
     ul {
         margin: 0;
     }

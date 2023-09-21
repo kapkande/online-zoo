@@ -21,11 +21,12 @@ function swopUnderSlider(e) {
         }
     });
 
-    if ('video__choiceVideo__back'.includes(targer.className)) {
+    if ('video__choiceVideo__back button'.includes(targer.className)) {
         document.querySelector('.video__choice__item-active')?.classList.remove('video__choice__item-active')
         flag = flag - 1 < 0 ? 3 : flag - 1
         videoitems[flag].classList.add('video__choice__item-active');
-    }else if ('video__choiceVideo__ahead'.includes(targer.className)) {
+        console.log(flag);
+    }else if ('video__choiceVideo__ahead button'.includes(targer.className)) {
         document.querySelector('.video__choice__item-active')?.classList.remove('video__choice__item-active')
         flag =  flag + 1 > 3 ? 0 : flag + 1
         videoitems[flag].classList.add('video__choice__item-active');

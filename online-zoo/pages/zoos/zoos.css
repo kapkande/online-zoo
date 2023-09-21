@@ -266,3 +266,159 @@
     background: url(../../assets/imeges/palm_foto.png) bottom left no-repeat, url(../../assets/imeges/strelitzia.png) right bottom no-repeat;
     padding-bottom: 25%;
 }
+
+.bottomImage .button {
+    margin: 0% 0 4% 0;
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    padding: 16px 0;
+    height: 18px;
+
+}
+
+.bottomImage {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#bottomImage {
+    flex: 1 1 360px;
+}
+
+@media (max-width: 1299px) {
+    .video__view {
+        width: 778px;
+        height: 438px;
+    }
+
+    .video__asideBar {
+        width: 72px;
+        height: 438px;
+    }
+
+    .video__asideBar-item,
+    .video__asideBar-arrow {
+        width: 52px;
+        height: 52px;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .video__choiceVideoBlock {
+        display: none;
+    }
+
+    .asideBar__item-0 {
+        transform: translate(20%, 10%);
+    }
+
+    .asideBar__item-1 {
+        transform: translate(20%, 131%);
+    }
+
+    .asideBar__item-2 {
+        transform: translate(20%, 252%);
+    }
+
+    .asideBar__item-3 {
+        transform: translate(20%, 373%);
+    }
+
+    .asideBar__item-4 {
+        transform: translate(20%, 490%);
+    }
+
+    .asideBar__item-5 {
+        transform: translate(20%, 611%);
+    }
+
+    .video__asideBar-arrow {
+        transform: translate(20%, 728%);
+    }
+
+    .info {
+        background-size: 18%;
+    }
+
+    .info__title {
+        text-align: center;
+    }
+
+    .info__briefBlok {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #bottomImage {
+        background-position: center;
+    }
+
+    .video {
+        padding: 34px 0 0 0;
+    }
+}
+
+@media (max-width: 857px) {
+    .video__videoBlock {
+        align-items: flex-end;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+    }
+
+    .video__asideBar,
+    .video__viewBlock {
+        width: 100%;
+    }
+
+    .video__view {
+        width: 100%;
+    }
+
+    .video__asideBar {
+        height: 62px;
+    }
+
+    .asideBar__item-0,
+    .asideBar__item-1,
+    .asideBar__item-2,
+    .asideBar__item-3,
+    .asideBar__item-4,
+    .asideBar__item-5 {
+        transform: translate(0%, 0%);
+    }
+
+    .video__asideBar-arrow {
+        display: none;
+    }
+
+    .video__asideBar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+        margin: -4px 0 0 0;
+    }
+
+    .video__asideBar-item {
+        position: sticky;
+    }
+
+    .bottomImage .button {
+        display: none;
+    }
+
+    .video__choiceVideo {
+        justify-content: space-between;
+    }
+
+    .info__brief__image {
+        width: 320px;
+        height: 320px;
+    }
+    .info__brief__textBlock{
+        font-size: 20px;
+    }
+}

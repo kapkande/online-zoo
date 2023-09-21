@@ -40,6 +40,7 @@ const asideBar = document.querySelector('.video__asideBar');
             e.classList.add('iconActive');
 
             const targetDate = getTargetDate();
+            setBottonImage(targetDate)
             createTextBlock(targetDate);
             setUrlForIcons(targetDate);
             url.searchParams.set('bord', arrIcons[i]);
@@ -48,3 +49,36 @@ const asideBar = document.querySelector('.video__asideBar');
     });
 })();
 
+function setBottonImage(targetDate) {
+    const image = document.querySelector('#bottomImage');
+    image.style.backgroundImage = `url(${targetDate.imageBotton})`
+}
+
+const onMenuClick = (even) => {
+
+    const target = even.target;
+    const popup = document.querySelector('.popup');
+    const whadow = document.querySelector('.popup, .popup-active')
+    const body = document.querySelector('body')
+    const header = document.querySelector('header')
+    const isAccountBTN = ['header__burger', 'header__burger__line'].includes(target.className);
+    const isShadow = ['popup popup-active'].includes(target.className);
+    const isPopupCross = ['popup__cross', 'popup__cross__line'].includes(target.className);
+    if (isAccountBTN || isPopupCross) {
+        popup.classList.toggle("popup-active")
+        header.classList.toggle("header-active")
+        body.classList.toggle('body-shadow')
+    } else if (isShadow) {
+        console.log(11);
+        popup.classList.toggle("popup-active")
+        header.classList.toggle("header-active")
+        body.classList.toggle('body-shadow')
+    }
+
+
+
+}
+const headerBurger = document.querySelector('.header__burger')
+const Shadow = document.querySelector('.popup, .popup-active')
+const clickMenuBurger = headerBurger.addEventListener('click', onMenuClick);
+const clickShadow = Shadow.addEventListener('click', onMenuClick);

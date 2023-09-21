@@ -12,7 +12,9 @@
 .header__nav__blox {
     display: flex;
 }
-
+li {
+    list-style-type: none;
+}
 .header__nav__ul {
     display: flex;
 }
